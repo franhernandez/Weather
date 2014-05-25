@@ -2,7 +2,16 @@
 Weather
 =======
 
-PHP Library Weather (Yahoo Api), using Client Guzzle
+PHP Library Weather (Yahoo Api), using HTTP Client Guzzle.
 
-The documentation guzzle: http://guzzle.readthedocs.org/en/latest/http-client/client.html#creating-a-client
+=======
+References
+Guzzle: http://guzzle.readthedocs.org/en/latest/http-client/client.html#creating-a-client
+Yahoo Api Weather: https://developer.yahoo.com/weather/
+=======
+
+Use sample
+======
+$library = new WeatherLibrary();
+$library->getWeatherFromWoeid($woeid);
 
