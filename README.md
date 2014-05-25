@@ -2,4 +2,7 @@
 Weather
 =======
 
-Library Weather in PHP - Test Packagist - Test Travis
+PHP Library Weather (Yahoo Api), using Client Guzzle
+
+The documentation guzzle: http://guzzle.readthedocs.org/en/latest/http-client/client.html#creating-a-client
+

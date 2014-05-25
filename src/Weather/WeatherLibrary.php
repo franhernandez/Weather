@@ -1,7 +1,5 @@
 <?php
-/**
- * http://guzzle.readthedocs.org/en/latest/http-client/client.html#creating-a-client
- */
+
 namespace Weather;
 
 use Guzzle\Http\Client;
