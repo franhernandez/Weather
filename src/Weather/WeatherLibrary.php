@@ -9,18 +9,18 @@ use Guzzle\Http\Exception\RequestException;
 
 class WeatherLibrary
 {
-    private $httpClient;
+    private $client;
 
     CONST API_WEBSERVICE_URI = "http://weather.yahooapis.com";
 
     public function __construct()
     {
-        $this->httpClient = new Client(self::API_WEBSERVICE_URI);
+        $this->client = new Client(self::API_WEBSERVICE_URI);
     }
 
     public function getWeatherFromWoeid($woeid)
     {
-        $request = $this->httpClient->get("forecastrss?w=$woeid");
+        $request = $this->client->get("forecastrss?w=$woeid");
         try {
             $response = $request->send();
         } catch (RequestException $e) {
