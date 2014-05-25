@@ -16,7 +16,8 @@
     "authors": [
         {
             "name": "Fran Hernandez",
-            "email": "fran.hernandez.duran@gmail.com"
+            "email": "fran.hernandez.duran@gmail.com",
+            "role": "Developer"
         }
     ],
     "autoload": {
