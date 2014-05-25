@@ -34,10 +34,10 @@ class WeatherLibrary
 
     private function fillException($e)
     {
-        $weather = $e->getRequest() . "\n";
+        $message = $e->getRequest() . "\n";
         if ($e->hasResponse()) {
-            $weather .= $e->getResponse() . "\n";
+            $message .= $e->getResponse() . "\n";
         }
-        return $weather;
+        return $message;
     }
 }
