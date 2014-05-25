@@ -22,8 +22,7 @@ class WeatherLibrary
     {
         $request = $this->httpClient->get("forecastrss?w=$woeid");
         try {
-            $response = $request->send();
-            return (string)$response->xml()->channel->item->description;
+            return (string)$request->send()->xml()->channel->item->description;
         } catch (RequestException $e) {
             return $this->fillException($e);
         }
