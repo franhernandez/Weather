@@ -1,0 +1,30 @@
+{
+    "name": "Weather",
+    "description": "Library Weather in PHP",
+    "keywords": ["Travis","Packagist","Wheater"],
+    "homepage": "https://github.com/franhernandez/Weather",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*@dev",
+        "mockery/mockery": "dev-master@dev"
+    },
+    "require":{
+        "guzzle/guzzle": "3.7.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fran Hernandez",
+            "email": "fran.hernandez.duran@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Weather": "src/"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "dev"
+}
