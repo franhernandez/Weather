@@ -12,7 +12,8 @@ class WeatherLibraryTest extends \PHPUnit_Framework_TestCase
      */
     public function prueba()
     {
-        $this->assertTrue((new WeatherLibrary())->connect());
+        $weatherLibrary = new WeatherLibrary();
+        $this->assertTrue($weatherLibrary->connect());
     }
 }
  
