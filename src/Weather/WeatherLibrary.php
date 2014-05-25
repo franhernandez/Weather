@@ -22,10 +22,16 @@ class WeatherLibrary
     {
         $request = $this->httpClient->get("forecastrss?w=$woeid");
         try {
-            return (string)$request->send()->xml()->channel->item->description;
+            $response = $request->send();
+            return $this->parseResponse($response);
         } catch (RequestException $e) {
             return $this->fillException($e);
         }
+    }
+
+    private function parseResponse($response)
+    {
+        return (string)$response->xml()->channel->item->description;
     }
 
     private function fillException($e)
