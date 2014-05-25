@@ -24,10 +24,8 @@ class WeatherLibrary
         try {
             $response = $request->send();
         } catch (RequestException $e) {
-
             return $this->fillException($e);
         }
-
         return $this->parseResponse($response);
     }
 
@@ -38,11 +36,10 @@ class WeatherLibrary
 
     private function fillException($e)
     {
-        $weatherDescription = $e->getRequest() . "\n";
+        $weather = $e->getRequest() . "\n";
         if ($e->hasResponse()) {
-            $weatherDescription .= $e->getResponse() . "\n";
+            $weather .= $e->getResponse() . "\n";
         }
-
-        return $weatherDescription;
+        return $weather;
     }
 }
